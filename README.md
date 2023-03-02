@@ -30,7 +30,7 @@ foo(1, 'wut', 3);
 
 ## 2. CLI con [Commander.js](https://www.npmjs.com/package/commander)
 
-- En log.js
+- En `log.js`
 
 ```javascript
 program
@@ -46,9 +46,21 @@ program
 
 ![línea de comandos](./docs/comandos.png)
 
-## 3. Reto 1: Soportar funciones flecha
+## 3. Uso de scripts para ejecutar el programa
 
-- En `logging-espree.js` se ha añadido la función `isArrowFunctionExpression` que devuelve `true` si el nodo es una función flecha.
+- En `package.json`
+
+```json
+"scripts": {
+    "test": "mocha test/test.mjs",
+    "cov": "c8 npm run test",
+    "clean": "rm -f test/data/out*.js; rm -f src/calc.js;"
+},
+```
+
+## 4. Reto 1: Soportar funciones flecha
+
+- En `logging-espree.js` se ha añadido la función `ArrowFunctionExpression` que devuelve `true` si el nodo es una función flecha.
 
 ```javascript
 /**
@@ -71,7 +83,7 @@ export function addLogging(code) {
 }
 ```
 
-## 4. Reto 2: Añadir el número de línea
+## 5. Reto 2: Añadir el número de línea
 
 - En `logging-espree.js` se ha modificado la función `addBeforeCode` para que indique el número de línea.
 
@@ -89,7 +101,7 @@ function addBeforeCode(node) {
 }
 ```
 
-## 5. Tests and Covering
+## 6. Tests and Covering
 
 - En `test-description.mjs` se han añadido test para comprobar la funcionalidad del programa
 
@@ -157,7 +169,7 @@ for (let i = 0; i < Test.length; i++) {
 
 ![test](./docs/test.png)
 
-## 6. Se añade un estudio de cubrimiento de las pruebas (coverage) y se ha publicado en Github pages
+## 7. Se añade un estudio de cubrimiento de las pruebas (coverage) y se ha publicado en Github pages
 
 - Usando: 
 
@@ -171,7 +183,7 @@ npx c8 --reporter=html --reporter=text --report-dir docs mocha
 
 ![github pages](./docs/github-pages.png)
 
-## 7. Se hace integración continua usando Github Actions
+## 8. Se hace integración continua usando Github Actions
 
 - En `nodes.yml`
 
@@ -205,7 +217,7 @@ jobs:
 ```
 ![github actions](./docs/github-actions.png)
 
-## 8. NPM
+## 9. NPM
 
 - Se ha publicado el paquete en [NPM](https://www.npmjs.com/package/@alu0101420868/espree-logging-solution?activeTab=readme)
 
