@@ -207,7 +207,7 @@ jobs:
 
 ## 8. NPM
 
-- Se ha publicado el paquete en [NPM](https://www.npmjs.com/package/espree-logging-alicia_guadalupe-cruz-alu0101420868)
+- Se ha publicado el paquete en [NPM](https://www.npmjs.com/package/@alu0101420868/espree-logging-solution?activeTab=readme)
 
 - Para loquearnos en NPM usamos:
 
